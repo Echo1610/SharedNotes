@@ -142,19 +142,19 @@ You create a filehandle and attach it to a file by using `open`. The `open` func
 You can simply add characters to the filename to specify which behavior you want:
 
 ```perl
-open(SESAME, "filename"); 						# read from existing file
-open(SESAME, "<", "filename");					# (same thing, explicitly)
-open(SESAME, ">", "filename");					# create file and write to it
-open(SESAME, ">>", "filename");					# append to existing file
-open(SESAME, "|-", "output-pipe-command")		# set up an output filter
+open(SESAME, "filename");                       # read from existing file
+open(SESAME, "<", "filename");                  # (same thing, explicitly)
+open(SESAME, ">", "filename");                  # create file and write to it
+open(SESAME, ">>", "filename");                 # append to existing file
+open(SESAME, "|-", "output-pipe-command")       # set up an output filter
 ```
 
 This form of `open` also lets you specify the character encoding of the file:
 
 ```perl
-open(SESAME, "< :encoding(UTF-8)", 		$somefile);
-open(SESAME, "> :crlf",					 $somefile);
-open(SESAME, ">> :encoding(MacRoman)",	$somefile);
+open(SESAME, "< :encoding(UTF-8)",      $somefile);
+open(SESAME, "> :crlf",                 $somefile);
+open(SESAME, ">> :encoding(MacRoman)",  $somefile);
 ```
 
 Once opened, the filehandle SESAME can be used to access the file or pipe until it is explicitly close with `close(SESAME)`, or <u>until the filehandle is attached to another file by a subsequent `open` on the same filehandle.</u>
@@ -169,9 +169,9 @@ open(my $handle, "< :crlf : encoding(cp1252)", $somefile)
 Once you’ve opened a filehandle for input, you can read a line using the line reading operator, `<>` (also know as the angle operator). The angle operator encloses the filehandle (`<SESAME>` for a direct one or `<$handle>` for a indirect one) you want to read lines from. The empty angle operator `<>`, will read lines from all the files specified on the command line, or `STDIN` if no arguments were specified. An example:
 
 ```perl
-print STDOUT "Enter a number: ";		# ask for a number
-$number = <STDIN>;					 # input the number
-say STDOUT "The number is $number"  # print the number
+print STDOUT "Enter a number: ";        # ask for a number
+$number = <STDIN>;                      # input the number
+say STDOUT "The number is $number";     # print the number
 ```
 
 The `STDOUT` could be replaced by other filehandles you want to write to, it is the same with `STDIN`.
@@ -185,8 +185,8 @@ chomp($number = <STDIN>);
 which means the same thing as:
 
 ```perl
-$number = <STDIN>;			# input a number
-chomp($number);				# remove trailing newline
+$number = <STDIN>;          # input a number
+chomp($number);             # remove trailing newline
 ```
 
 ## Regular Expressions
