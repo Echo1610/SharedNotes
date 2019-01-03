@@ -1,14 +1,21 @@
----
-title: Evolution of Mammalian Diving Capacity Traced by Myoglobin Net Surface Charge
-tags: Study
-notebook: Biochemistry
----
-
 # An overview of Perl
 
 Perl is a programming language that highly resembles **natural language** rather than machine language. _It is very interesting_
 
-[TOC]
+<!-- TOC -->
+
+- [An overview of Perl](#an-overview-of-perl)
+    - [Variable types and uses](#variable-types-and-uses)
+        - [Singularities](#singularities)
+        - [Pluralities](#pluralities)
+            - [Arrays](#arrays)
+            - [Hashes](#hashes)
+        - [Simplicities](#simplicities)
+    - [Verbs](#verbs)
+    - [Filehandles](#filehandles)
+    - [Regular Expressions](#regular-expressions)
+
+<!-- /TOC -->
 
 
 
@@ -39,7 +46,7 @@ my $hsh = {Na => 19, Cl => 35}; # reference to an unamed hash
 ### Pluralities
 #### Arrays
 
-An *array* is an ordered list of *scalars*,[^2] accessed[^1] by the scalar's position in the list. The array is started with `@`
+An *array* is an ordered list of *scalars*, accessed by the scalar's position in the list. The array is started with `@`
 
 ```perl
 my @home = ("couch", "chair", "tennis", "pipe"); # attention to the cound brackets.
@@ -110,14 +117,9 @@ use strict;
 
 What the `strict` module does is tighten up some of the rules so that you have to be more explicit about various things that Perl would otherwise guess about, such as how you want your variables to be scoped.
 
-
-
-[^1]: Or keyed, or indexed, or subscripted, or looked up.
-[^2]: This means that you can store every *scalar* in your array, regardless of what the scalar is.
-
 ## Verbs
 
-Many verbs in Perl are commands: they tell the Perl interpreter to do something. The meanings of Perl verbs tend to mush off in various directions depending on the context. **A statement starting with a verb is  generally purely imperative and evaluated entirely for its side effects**.[^3] A frequently seen built-in command is the `say` command:
+Many verbs in Perl are commands: they tell the Perl interpreter to do something. The meanings of Perl verbs tend to mush off in various directions depending on the context. **A statement starting with a verb is  generally purely imperative and evaluated entirely for its side effects**. A frequently seen built-in command is the `say` command:
 
 ```perl
 say "Adam's wife is $wife{'Adam'}.";
@@ -287,7 +289,5 @@ would match “Fred” in both “The Great Fred” and “Fred the Great”, bu
 There are also anchors for the beginning and the end of the string. If it is the first character of a pattern, the caret (`^`) matches the “nothing”  at the beginning of the string. The dollar sign (`$`) matches the nothing at the end of the string instead of beginning.
 
 
-
-[^3]: We sometimes call these verbs *procedures*, especially when they’re user defined.
 
  
