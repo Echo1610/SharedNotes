@@ -22,24 +22,24 @@ Perl is a programming language that highly resembles **natural language** rather
 ## Variable types and uses
 
 ---------------------------
-|    Type    | Sigil |   Example   |                   Is a Name For                   |
-|------------|-------|-------------|---------------------------------------------------|
-| Scalar     | `$`   | `$cents`    | An individual value (number, string or a pointer) |
-| Array      | `@`   | `@large`    | A list of values, keyed by numbers                |
-| Hash       | `%`   | `%interest` | A group of values, keyed by string                |
-| Subroutine | `&`   | `&how`      | A callable chunk of Perl code                     |
-| Typeglob   | `*`   | `*struck`   | Everything named struck                           |
+| Type         | Sigil   | Example       | Is a Name For                                       |
+| ------------ | ------- | ------------- | --------------------------------------------------- |
+| Scalar       | `$`     | `$cents`      | An individual value (number, string or a pointer)   |
+| Array        | `@`     | `@large`      | A list of values, keyed by numbers                  |
+| Hash         | `%`     | `%interest`   | A group of values, keyed by string                  |
+| Subroutine   | `&`     | `&how`        | A callable chunk of Perl code                       |
+| Typeglob     | `*`     | `*struck`     | Everything named struck                             |
 
 ### Singularities
 
 A **Scalar** could save a numeric number, a string, and a reference.
 
 ```perl
-my $answer = 42;#an integer
-my $per = "Camel"; #string
-my $cwd = `pwd`; #string output from a command
-my $arr = \@myarray; #reference to an array
-my $ary = [1, 2, 3, 4, 5]; #reference to an unnamed array, attention the square brackets.
+my $answer = 42;                # an integer
+my $per = "Camel";              # string
+my $cwd = `pwd`;                # string output from a command
+my $arr = \@myarray;            # reference to an array
+my $ary = [1, 2, 3, 4, 5];      # reference to an unnamed array, attention the square brackets.
 my $hsh = {Na => 19, Cl => 35}; # reference to an unamed hash
 ```
 
